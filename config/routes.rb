@@ -1,7 +1,16 @@
 Booklist::Application.routes.draw do
+  get "books/index"
+  get "books/show"
+  get "books/edit"
+  get "books/update"
+  get "books/new"
+  get "books/create"
+  get "books/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :books
 
+  root 'book#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
